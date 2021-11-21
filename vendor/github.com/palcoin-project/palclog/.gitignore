@@ -1,11 +1,6 @@
 # Temp files
 *~
 
-# Databases
-palcd.db
-*-shm
-*-wal
-
 # Log files
 *.log
 
@@ -31,7 +26,3 @@ _cgo_export.*
 _testmain.go
 
 *.exe
-
-# Code coverage files
-profile.tmp
-profile.cov
