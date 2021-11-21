@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/palcoin-project/palclog"
+	"github.com/palcoin-project/palcutil"
 )
 
 // blockProgressLogger provides periodic logging for other services in order
