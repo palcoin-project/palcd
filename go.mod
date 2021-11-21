@@ -12,6 +12,6 @@ require (
 	github.com/decred/dcrd/lru v1.1.0
 	github.com/jessevdk/go-flags v1.5.0
 	github.com/jrick/logrotate v1.0.0
-	github.com/palcoin-net/palcutil latest
+	github.com/palcoin-project/palcutil latest
 	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97
 )
