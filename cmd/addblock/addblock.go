@@ -8,11 +8,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/btcsuite/btclog"
 	"github.com/palcoin-project/palcd/blockchain"
 	"github.com/palcoin-project/palcd/blockchain/indexers"
 	"github.com/palcoin-project/palcd/database"
 	"github.com/palcoin-project/palcd/limits"
+	"github.com/palcoin-project/palclog"
 )
 
 const (
@@ -22,7 +22,7 @@ const (
 
 var (
 	cfg *config
-	log btclog.Logger
+	log palclog.Logger
 )
 
 // loadBlockDB opens the block database and returns a handle to it.
@@ -68,7 +68,7 @@ func realMain() error {
 	cfg = tcfg
 
 	// Setup logging.
-	backendLogger := btclog.NewBackend(os.Stdout)
+	backendLogger := palclog.NewBackend(os.Stdout)
 	defer os.Stdout.Sync()
 	log = backendLogger.Logger("MAIN")
 	database.UseLogger(backendLogger.Logger("BCDB"))

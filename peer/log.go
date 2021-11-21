@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/btcsuite/btclog"
 	"github.com/palcoin-project/palcd/chaincfg/chainhash"
 	"github.com/palcoin-project/palcd/txscript"
 	"github.com/palcoin-project/palcd/wire"
+	"github.com/palcoin-project/palclog"
 )
 
 const (
@@ -24,7 +24,7 @@ const (
 // log is a logger that is initialized with no output filters.  This
 // means the package will not perform any logging by default until the caller
 // requests it.
-var log btclog.Logger
+var log palclog.Logger
 
 // The default amount of logging is none.
 func init() {
@@ -34,11 +34,11 @@ func init() {
 // DisableLog disables all library log output.  Logging output is disabled
 // by default until UseLogger is called.
 func DisableLog() {
-	log = btclog.Disabled
+	log = palclog.Disabled
 }
 
 // UseLogger uses a specified Logger to output package logging info.
-func UseLogger(logger btclog.Logger) {
+func UseLogger(logger palclog.Logger) {
 	log = logger
 }
 
