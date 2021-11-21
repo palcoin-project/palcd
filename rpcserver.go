@@ -3608,7 +3608,7 @@ func handleValidateAddress(s *rpcServer, cmd interface{}, closeChan <-chan struc
 		result.WitnessProgram = btcjson.String(hex.EncodeToString(addr.WitnessProgram()))
 
 	default:
-		// Handle the case when a new Address is supported by btcutil, but none
+		// Handle the case when a new Address is supported by palcutil, but none
 		// of the cases were matched in the switch block. The current behaviour
 		// is to do nothing, and only populate the Address and IsValid fields.
 	}
