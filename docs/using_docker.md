@@ -3,7 +3,7 @@
 
 ## Introduction
 
-With Docker you can easily set up *palcd* to run your Palcoin full node. You can find the official *palcd* Docker images on Docker Hub [palcoin-net/palcd](https://hub.docker.com/r/palcoin-project/palcd). The Docker source file of this image is located at [Dockerfile](https://github.com/palcoin-project/palcd/blob/master/Dockerfile).
+With Docker you can easily set up *palcd* to run your Palcoin full node. You can find the official *palcd* Docker images on Docker Hub [palcoin-project/palcd](https://hub.docker.com/r/palcoin-project/palcd). The Docker source file of this image is located at [Dockerfile](https://github.com/palcoin-project/palcd/blob/master/Dockerfile).
 
 This documentation focuses on running Docker container with *docker-compose.yml* files. These files are better to read and you can use them as a template for your own use. For more information about Docker and Docker compose visit the official [Docker documentation](https://docs.docker.com/).
 
@@ -84,7 +84,7 @@ services:
   palcd:
     container_name: palcd
     hostname: palcd
-    image: palcoin-net/palcd:latest
+    image: palcoin-project/palcd:latest
     restart: unless-stopped
     volumes:
       - palcd-data:/root/.palcd
@@ -106,7 +106,7 @@ services:
   palcd:
     container_name: palcd
     hostname: palcd
-    image: palcoin-net/palcd:latest
+    image: palcoin-project/palcd:latest
     restart: unless-stopped
     volumes:
       - palcd-data:/root/.palcd
@@ -133,7 +133,7 @@ services:
   palcd:
     container_name: palcd
     hostname: palcd
-    image: palcoin-net/palcd:latest
+    image: palcoin-project/palcd:latest
     restart: unless-stopped
     volumes:
       - palcd-data:/root/.palcd
